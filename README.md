@@ -13,6 +13,7 @@
 
 YOLOX-s 模型评估
 python tools/eval.py -n  yolox-s -c yolox_s.pth -b 64 -d 1 --conf 0.001 [--fp16] [--fuse]
+
 --fuse: fuse conv and bn
 -d: number of GPUs used for evaluation. DEFAULT: All GPUs available will be used.
 -b: total batch size across on all GPUs
