@@ -17,6 +17,8 @@ pip install pycocotools
 
 pip install loguru
 
+需要把eval的coco数据集val2017放在YOLOX/datasets/COCO/目录下，与annotataions同一级
+
 export YOLOX_DATADIR=/home/aistudio/paddle版本/YOLOX/datasets
 
 python tools/eval.py -n  yolox-s -c yolox_s.pdparams -b 64 -d 1 --conf 0.001 [--fp16] [--fuse]
