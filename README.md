@@ -12,7 +12,7 @@
 
 YOLOX-s 模型评估
 
-需要把eval的coco数据集val2017放在/paddle版本/YOLOX/datasets/COCO/目录下，与annotataions同一级
+需要把eval的coco数据集val2017放在/paddle版本/YOLOX/datasets/COCO/目录下，与annotataions同一级。详见datasets。
 
 
 pip install paddleslim
