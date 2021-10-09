@@ -9,6 +9,7 @@
 
 ![image](https://user-images.githubusercontent.com/26295563/133545014-2afcfa60-d994-48da-8ff1-536fc7346b27.png)
 
+cd paddle版本/YOLOX
 
 YOLOX-s 模型评估
 
