@@ -9,13 +9,29 @@
 
 ![image](https://user-images.githubusercontent.com/26295563/133545014-2afcfa60-d994-48da-8ff1-536fc7346b27.png)
 
-复现没有实现train部分，复现失败
 
 YOLOX-s 模型评估
-python tools/eval.py -n  yolox-s -c yolox_s.pth -b 64 -d 1 --conf 0.001 [--fp16] [--fuse]
+pip install paddleslim
+
+pip install pycocotools
+
+pip install loguru
+
+export YOLOX_DATADIR=/home/aistudio/paddle版本/YOLOX/datasets
+
+python tools/eval.py -n  yolox-s -c yolox_s.pdparams -b 64 -d 1 --conf 0.001 [--fp16] [--fuse]
 
 --fuse: fuse conv and bn
-
 -d: number of GPUs used for evaluation. DEFAULT: All GPUs available will be used.
-
 -b: total batch size across on all GPUs
+
+
+复现中评估部分出现转换参数问题，读参后模型输出：
+
+（outputs.....coco_evaluators：[标签label，置信度confidence，xmin，ymin，xmax，ymax]）
+
+Tensor(shape=[1000, 6], dtype=float32, place=CPUPlace, stop_gradient=True,
+       [[ 1.           ,  1.           , -inf.         , -1244.98120117,  inf.         , -1244.98120117],
+        [ 1.           ,  1.           , -inf.         , -4947.79833984,  inf.         , -4947.79833984],
+        [ 1.           ,  1.           , -inf.         , -4521.74658203,  inf.         , -4521.74658203],
+        ...,
