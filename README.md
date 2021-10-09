@@ -11,13 +11,16 @@
 
 
 YOLOX-s 模型评估
+
+需要把eval的coco数据集val2017放在/paddle版本/YOLOX/datasets/COCO/目录下，与annotataions同一级
+
+
 pip install paddleslim
 
 pip install pycocotools
 
 pip install loguru
 
-需要把eval的coco数据集val2017放在YOLOX/datasets/COCO/目录下，与annotataions同一级
 
 export YOLOX_DATADIR=/home/aistudio/paddle版本/YOLOX/datasets
 
