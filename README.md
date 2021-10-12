@@ -33,11 +33,7 @@ python tools/eval.py -n  yolox-s -c yolox_s.pdparams -b 64 -d 1 --conf 0.001 [--
 
 
 复现中评估部分出现转换参数问题，读参后模型输出：
+![image](https://user-images.githubusercontent.com/26295563/136894032-78a64a7e-1819-4680-b1a6-b4a422c68ec2.png)
 
-（outputs.....coco_evaluators：[标签label，置信度confidence，xmin，ymin，xmax，ymax]）
 
-Tensor(shape=[1000, 6], dtype=float32, place=CPUPlace, stop_gradient=True,
-       [[ 1.           ,  1.           , -inf.         , -1244.98120117,  inf.         , -1244.98120117],
-        [ 1.           ,  1.           , -inf.         , -4947.79833984,  inf.         , -4947.79833984],
-        [ 1.           ,  1.           , -inf.         , -4521.74658203,  inf.         , -4521.74658203],
-        ...,
+
