@@ -33,14 +33,16 @@ python tools/eval.py -n  yolox-s -c yolox_s.pdparams -b 64 -d 1 --conf 0.001 [--
 
 
 复现中评估部分出现转换参数问题，读参后模型输出：
-![image](https://user-images.githubusercontent.com/26295563/136894032-78a64a7e-1819-4680-b1a6-b4a422c68ec2.png)
+
+![截屏2021-10-13 10 04 15](https://user-images.githubusercontent.com/26295563/137054658-465ebb58-4ecb-4b5b-a1f6-f6453900005a.png)
 
 问题部分：
 
 1.部分参数未读入
 
 2.检测目标框只能分类为第一类且置信度过低
-
+ 
+3.output score设置为nms输出[:,0]，应该是output[:,5]*[:,6]
 
 
 
