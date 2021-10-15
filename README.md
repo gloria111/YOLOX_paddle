@@ -2,7 +2,6 @@
 【飞桨论文复现挑战赛（第四期）】论文序号9 复现
 
 论文名称: YOLOX: Exceeding YOLO Series in 2021
-
 ===========================
 测试结果
 
@@ -10,11 +9,10 @@
 
 ![image](https://user-images.githubusercontent.com/26295563/133545014-2afcfa60-d994-48da-8ff1-536fc7346b27.png)
 
------------
-
 YOLOX-s 模型评估
-
+-----------
 需要把eval的coco数据集val2017放在/paddle版本/YOLOX/datasets/COCO/目录下，与annotataions同一级。详见datasets。
+
     pip install paddleslim
     pip install pycocotools
     pip install loguru
