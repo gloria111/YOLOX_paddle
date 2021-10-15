@@ -16,24 +16,23 @@ YOLOX-s 模型评估
 需要把eval的coco数据集val2017放在/paddle版本/YOLOX/datasets/COCO/目录下，与annotataions同一级。详见datasets。
 
 
-pip install paddleslim
+  pip install paddleslim
 
-pip install pycocotools
+  pip install pycocotools
 
-pip install loguru
+  pip install loguru
 
+  export YOLOX_DATADIR=/home/aistudio/paddle版本/YOLOX/datasets
 
-export YOLOX_DATADIR=/home/aistudio/paddle版本/YOLOX/datasets
+  python tools/eval.py -n  yolox-s -c yolox_s.pdparams -b 64 -d 1 --conf 0.001 [--fp16] [--fuse]
 
-python tools/eval.py -n  yolox-s -c yolox_s.pdparams -b 64 -d 1 --conf 0.001 [--fp16] [--fuse]
-
---fuse: fuse conv and bn
--d: number of GPUs used for evaluation. DEFAULT: All GPUs available will be used.
--b: total batch size across on all GPUs
+ #######--fuse: fuse conv and bn
+ #######--d: number of GPUs used for evaluation. DEFAULT: All GPUs available will be used.
+ #######--b: total batch size across on all GPUs
 
 上传权重文件和transfer文件
 
-yolox_s的paddle权重文件链接: https://pan.baidu.com/s/1F7VjGPOlg6pLvM8AE62vxw 提取码: nuri 
+[yolox_s的paddle权重文件链接]: (https://pan.baidu.com/s/1F7VjGPOlg6pLvM8AE62vxw) 提取码: nuri 
 
 复现中评估部分出现转换参数问题，读参后模型输出：
 
