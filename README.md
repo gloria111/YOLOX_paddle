@@ -33,6 +33,8 @@ python tools/eval.py -n  yolox-s -c yolox_s.pdparams -b 64 -d 1 --conf 0.001 [--
 
 上传权重文件和transfer文件
 
+权重文件链接: https://pan.baidu.com/s/1F7VjGPOlg6pLvM8AE62vxw 提取码: nuri 
+
 复现中评估部分出现转换参数问题，读参后模型输出：
 
 ![截屏2021-10-13 10 04 15](https://user-images.githubusercontent.com/26295563/137054658-465ebb58-4ecb-4b5b-a1f6-f6453900005a.png)
