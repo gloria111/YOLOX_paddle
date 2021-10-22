@@ -33,6 +33,8 @@ YOLOX-s 模型评估
 ![截屏2021-10-13 10 04 15](https://user-images.githubusercontent.com/26295563/137054658-465ebb58-4ecb-4b5b-a1f6-f6453900005a.png)
 
 -----------
+读参后outputs=model(img)应输出：
+![image](https://user-images.githubusercontent.com/26295563/138442491-336c3d49-147e-4894-a11c-4001d5dd940f.png)
 
 问题部分：
 
