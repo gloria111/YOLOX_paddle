@@ -39,8 +39,7 @@ YOLOX-s 模型评估
 ![image](https://user-images.githubusercontent.com/26295563/138444230-f7a291f8-654d-4cc1-8096-e676f8ca6d66.png)
 
 参数文件对比一致：
-![图片1](https://user-images.githubusercontent.com/26295563/138445472-d153eeaa-ebfe-4c4c-9872-60a01f8d79d0.png)
-
+![image](https://user-images.githubusercontent.com/26295563/138445858-c91b7590-bec3-4d52-b627-a900b160be20.png)
 问题部分：
 
 ######   1.评分都为0
