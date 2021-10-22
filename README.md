@@ -35,7 +35,7 @@ YOLOX-s 模型评估
 -----------
 读参后outputs=model(img)应输出：
 ![image](https://user-images.githubusercontent.com/26295563/138442491-336c3d49-147e-4894-a11c-4001d5dd940f.png)
-但在该写完后
+但在改写完后出现bbox负值和inf
 ![image](https://user-images.githubusercontent.com/26295563/138444230-f7a291f8-654d-4cc1-8096-e676f8ca6d66.png)
 
 问题部分：
