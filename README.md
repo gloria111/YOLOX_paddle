@@ -28,7 +28,7 @@ YOLOX-s 模型评估
 
 [yolox_s的paddle权重文件链接:https://pan.baidu.com/s/1F7VjGPOlg6pLvM8AE62vxw,提取码: nuri ](https://pan.baidu.com/s/1F7VjGPOlg6pLvM8AE62vxw)。
 
-复现中评估部分出现转换参数问题，读参后模型输出：
+复现中评估部分出现问题，读参后模型输出：
 
 ![截屏2021-10-13 10 04 15](https://user-images.githubusercontent.com/26295563/137054658-465ebb58-4ecb-4b5b-a1f6-f6453900005a.png)
 
@@ -37,6 +37,9 @@ YOLOX-s 模型评估
 ![image](https://user-images.githubusercontent.com/26295563/138442491-336c3d49-147e-4894-a11c-4001d5dd940f.png)
 但在改写完后出现bbox负值和inf
 ![image](https://user-images.githubusercontent.com/26295563/138444230-f7a291f8-654d-4cc1-8096-e676f8ca6d66.png)
+
+参数文件对比一致：
+![图片1](https://user-images.githubusercontent.com/26295563/138445472-d153eeaa-ebfe-4c4c-9872-60a01f8d79d0.png)
 
 问题部分：
 
