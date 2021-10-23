@@ -31,7 +31,7 @@ YOLOX-s 模型评估
 
 复现中评估部分出现问题，读参后模型输出：
 
-![image](https://user-images.githubusercontent.com/26295563/138536568-8da4d4c4-1023-40be-9a73-a7e1fd3faf2b.png)
+![image](https://user-images.githubusercontent.com/26295563/138537342-aab4e9b4-0061-4234-b512-079b973c6bc6.png)
 
 -----------
 torch框架下的YOLOX eval  outputs=model(img)输出：
@@ -39,13 +39,15 @@ torch框架下的YOLOX eval  outputs=model(img)输出：
 
 参数文件对比一致：
 ![image](https://user-images.githubusercontent.com/26295563/138445858-c91b7590-bec3-4d52-b627-a900b160be20.png)
+
+转换参数参考https://zhuanlan.zhihu.com/p/188744602
+
 问题部分：
 
-######   1.bbox评分都为0
+######   1.bbox评分过低0.00x
 
 ######   2.检测目标框只能分类为第一类且置信度过低
 
-######   3.head参数缺失
 
 
 
