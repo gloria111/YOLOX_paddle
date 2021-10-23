@@ -27,7 +27,7 @@ YOLOX-s 模型评估
 ######   d: number of GPUs used for evaluation. DEFAULT: All GPUs available will be used.
 ######   b: total batch size across on all GPUs
 
-[yolox_s的paddle权重文件链接:https://pan.baidu.com/s/1F7VjGPOlg6pLvM8AE62vxw,提取码: nuri ](https://pan.baidu.com/s/1F7VjGPOlg6pLvM8AE62vxw)。
+[yolox_s的paddle权重文件链接:链接: https://pan.baidu.com/s/1QHLmOVMyBxXA3YSicbyYng 提取码: u2uy]( https://pan.baidu.com/s/1QHLmOVMyBxXA3YSicbyYng)。
 
 复现中评估部分出现问题，读参后模型输出：
 
