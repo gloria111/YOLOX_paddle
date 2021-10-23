@@ -16,6 +16,7 @@ YOLOX-s 模型评估
 
 需要把eval的coco数据集val2017放在/paddle版本/YOLOX/datasets/COCO/目录下，与annotataions同一级。详见datasets。
 
+    pip install paddle
     pip install paddleslim
     pip install pycocotools
     pip install loguru
@@ -30,13 +31,11 @@ YOLOX-s 模型评估
 
 复现中评估部分出现问题，读参后模型输出：
 
-![截屏2021-10-13 10 04 15](https://user-images.githubusercontent.com/26295563/137054658-465ebb58-4ecb-4b5b-a1f6-f6453900005a.png)
+![image](https://user-images.githubusercontent.com/26295563/138536568-8da4d4c4-1023-40be-9a73-a7e1fd3faf2b.png)
 
 -----------
-读参后outputs=model(img)应输出：
+torch框架下的YOLOX eval  outputs=model(img)输出：
 ![image](https://user-images.githubusercontent.com/26295563/138442491-336c3d49-147e-4894-a11c-4001d5dd940f.png)
-但在改写完后出现bbox负值和inf
-![image](https://user-images.githubusercontent.com/26295563/138444230-f7a291f8-654d-4cc1-8096-e676f8ca6d66.png)
 
 参数文件对比一致：
 ![image](https://user-images.githubusercontent.com/26295563/138445858-c91b7590-bec3-4d52-b627-a900b160be20.png)
