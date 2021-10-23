@@ -41,11 +41,11 @@ torch框架下的YOLOX eval  outputs=model(img)输出：
 ![image](https://user-images.githubusercontent.com/26295563/138445858-c91b7590-bec3-4d52-b627-a900b160be20.png)
 问题部分：
 
-######   1.评分都为0
+######   1.bbox评分都为0
 
 ######   2.检测目标框只能分类为第一类且置信度过低
 
-######   3.output score设置为nms输出[:,0]，应该是output[:,5]*[:,6]
+######   3.head参数缺失
 
 
 
