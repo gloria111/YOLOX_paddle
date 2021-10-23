@@ -29,13 +29,11 @@ YOLOX-s 模型评估
 
 [yolox_s的paddle权重文件链接:链接: https://pan.baidu.com/s/1QHLmOVMyBxXA3YSicbyYng 提取码: u2uy]( https://pan.baidu.com/s/1QHLmOVMyBxXA3YSicbyYng)。
 
-复现中评估部分出现问题，读参后模型输出：
-
-![image](https://user-images.githubusercontent.com/26295563/138537342-aab4e9b4-0061-4234-b512-079b973c6bc6.png)
+复现中评估部分出现问题，postprocess改写有误：
 
 -----------
-torch框架下的YOLOX eval  outputs=model(img)输出：
-![image](https://user-images.githubusercontent.com/26295563/138442491-336c3d49-147e-4894-a11c-4001d5dd940f.png)
+torch框架下的YOLOX eval postprocess输出：
+![截屏2021-10-23 22 14 16](https://user-images.githubusercontent.com/26295563/138560195-47986109-5336-44e4-a4e3-7b14888de287.png)
 
 参数文件对比一致：
 ![image](https://user-images.githubusercontent.com/26295563/138445858-c91b7590-bec3-4d52-b627-a900b160be20.png)
@@ -44,9 +42,8 @@ torch框架下的YOLOX eval  outputs=model(img)输出：
 
 问题部分：
 
-######   1.bbox评分过低0.00x
+######   1.postprocess重写nms
 
-######   2.检测目标框只能分类为第一类且置信度过低
 
 
 
