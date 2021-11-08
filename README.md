@@ -29,7 +29,7 @@ YOLOX-s 模型评估
 
 [yolox_s的paddle权重文件链接:链接: https://pan.baidu.com/s/1QHLmOVMyBxXA3YSicbyYng 提取码: u2uy]( https://pan.baidu.com/s/1QHLmOVMyBxXA3YSicbyYng)。
 
-复现中评估部分出现问题，postprocess改写有误：
+复现中评估部分出现问题，分类为背景，得分过低。
 
 -----------
 torch框架下的YOLOX eval postprocess输出：
@@ -42,7 +42,7 @@ torch框架下的YOLOX eval postprocess输出：
 
 问题部分：
 
-######   1.postprocess重写nms
+######   1.在darknet层特征图出现较大错误
 
 
 
