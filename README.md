@@ -17,7 +17,6 @@ YOLOX-s 模型评估
 需要把eval的coco数据集val2017放在/paddle版本/YOLOX/datasets/COCO/目录下，与annotataions同一级。详见datasets。
 
     pip install paddle
-    pip install paddleslim
     pip install pycocotools
     pip install loguru
     export YOLOX_DATADIR=/home/aistudio/paddle版本/YOLOX/datasets
@@ -30,19 +29,14 @@ YOLOX-s 模型评估
 [yolox_s的paddle权重文件链接:链接: https://pan.baidu.com/s/1QHLmOVMyBxXA3YSicbyYng 提取码: u2uy]( https://pan.baidu.com/s/1QHLmOVMyBxXA3YSicbyYng)。
 
 复现中评估部分出现问题，分类为背景，得分过低。
-
------------
-torch框架下的YOLOX eval postprocess输出：
-![截屏2021-10-23 22 14 16](https://user-images.githubusercontent.com/26295563/138560195-47986109-5336-44e4-a4e3-7b14888de287.png)
-
-参数文件对比一致：
-![image](https://user-images.githubusercontent.com/26295563/138445858-c91b7590-bec3-4d52-b627-a900b160be20.png)
-
 转换参数参考https://zhuanlan.zhihu.com/p/188744602
 
-问题部分：
+评估部分问题：
 
 ######   1.在darknet层特征图出现较大错误
+训练部分问题：
+
+######   1.显存溢出
 
 
 
