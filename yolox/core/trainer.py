@@ -114,8 +114,8 @@ class Trainer:
             self.ema_model.update(self.model)
 
         lr = self.lr_scheduler.update_lr(self.progress_in_iter + 1)
-        for param_group in self.optimizer.param_groups:
-            param_group["lr"] = lr
+        self.optimizer.set_lr(lr)
+
 
         iter_end_time = time.time()
         self.meter.update(
@@ -235,7 +235,7 @@ class Trainer:
             )
             loss_meter = self.meter.get_filtered_meter("loss")
             loss_str = ", ".join(
-                ["{}: {:.1f}".format(k, v.latest) for k, v in loss_meter.items()]
+                ["{}: {:.1f}".format(k, v.latest.numpy()[0]) for k, v in loss_meter.items()]
             )
 
             time_meter = self.meter.get_filtered_meter("time")

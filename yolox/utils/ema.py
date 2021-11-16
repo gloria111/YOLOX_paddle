@@ -58,6 +58,6 @@ class ModelEMA:
                 model.layers.state_dict() if is_parallel(model) else model.state_dict()
             )  # model state_dict
             for k, v in self.ema.state_dict().items():
-                if v.dtype.is_floating_point:
+                if v.dtype in [paddle.float16, paddle.float32, paddle.float64]:
                     v *= d
                     v += (1.0 - d) * msd[k].detach()

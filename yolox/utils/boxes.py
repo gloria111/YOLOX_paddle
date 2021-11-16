@@ -206,20 +206,39 @@ def bboxes_iou(bboxes_a, bboxes_b, xyxy=True):
         area_a = paddle.prod(bboxes_a[:, 2:] - bboxes_a[:, :2], 1)
         area_b = paddle.prod(bboxes_b[:, 2:] - bboxes_b[:, :2], 1)
     else:
-        tl = paddle.max(
-            (bboxes_a[:, None, :2] - bboxes_a[:, None, 2:] / 2),
-            (bboxes_b[:, :2] - bboxes_b[:, 2:] / 2),
-        )
-        br = paddle.min(
-            (bboxes_a[:, None, :2] + bboxes_a[:, None, 2:] / 2),
-            (bboxes_b[:, :2] + bboxes_b[:, 2:] / 2),
-        )
+        # tl = paddle.max(
+        #     (bboxes_a[:, None, :2] - bboxes_a[:, None, 2:] / 2),
+        #     (bboxes_b[:, :2] - bboxes_b[:, 2:] / 2),
+        # )
+        # br = paddle.min(
+        #     (bboxes_a[:, None, :2] + bboxes_a[:, None, 2:] / 2),
+        #     (bboxes_b[:, :2] + bboxes_b[:, 2:] / 2),
+        # )
+        if bboxes_b.shape[0] != 0:
+            tl = paddle.maximum(
+                (bboxes_a[:, :2] - bboxes_a[:, 2:] / 2).unsqueeze(1),
+                (bboxes_b[:, :2] - bboxes_b[:, 2:] / 2),
+            )
+            br = paddle.minimum(
+                (bboxes_a[:, :2] + bboxes_a[:, 2:] / 2).unsqueeze(1),
+                (bboxes_b[:, :2] + bboxes_b[:, 2:] / 2),
+            )
+            area_a = paddle.prod(bboxes_a[:, 2:], 1)
+            area_b = paddle.prod(bboxes_b[:, 2:], 1)
+        else:
+            tl = paddle.zeros([0, 2])
+            br = paddle.zeros([0, 2])
+            area_a = paddle.prod(paddle.zeros([0, 2]), 1)
+            area_b = paddle.prod(paddle.zeros([0, 2]), 1)
+    if bboxes_b.shape[0] !=0: 
+        en = (tl < br).cast(tl.dtype).prod(axis=2)
+        area_i = paddle.prod(br - tl, 2) * en  # * ((tl < br).all())
 
-        area_a = paddle.prod(bboxes_a[:, 2:], 1)
-        area_b = paddle.prod(bboxes_b[:, 2:], 1)
-    en = (tl < br).type(tl.type()).prod(dim=2)
-    area_i = paddle.prod(br - tl, 2) * en  # * ((tl < br).all())
-    return area_i / (area_a[:, None] + area_b - area_i)
+    else:
+        en = tl.prod(axis=0)
+        area_i = paddle.prod(br - tl, 0) * en  # * ((tl < br).all())
+
+    return area_i / (area_a.unsqueeze(-1) + area_b - area_i)
 
 
 def matrix_iou(a, b):

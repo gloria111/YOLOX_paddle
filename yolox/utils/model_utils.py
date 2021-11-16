@@ -9,7 +9,7 @@ import paddle
 # import torch.nn as nn
 import paddle.nn as nn
 # from thop import profile
-import paddleslim as slim
+# import paddleslim as slim
 
 
 __all__ = [

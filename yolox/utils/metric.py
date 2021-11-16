@@ -116,7 +116,7 @@ class MeterBuffer(defaultdict):
             values = {}
         values.update(kwargs)
         for k, v in values.items():
-            if isinstance(v, paddle.to_tensor):
+            if isinstance(v, paddle.Tensor):
                 v = v.detach()
             self[k].update(v)
 
