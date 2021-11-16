@@ -37,6 +37,9 @@ YOLOX-s 模型评估
 训练部分问题：
 
 ######   1.显存溢出
+######  OSError: (External)  Cuda error(700), an illegal memory access was encountered.
+  [Advise: Please search for the error code(700) on website( https://docs.nvidia.com/cuda/archive/10.0/cuda-runtime-api/group__CUDART__TYPES.html#group__CUDART__TYPES_1g3f51e3575c2178246db0a94a430e0038 ) to get Nvidia's official solution about CUDA Error.] (at /paddle/paddle/fluid/platform/gpu_info.cc:382)
+
 
 
 
