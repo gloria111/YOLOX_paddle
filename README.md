@@ -36,12 +36,11 @@ YOLOX-s 模型评估
 ######   在darknet层特征图出现较大错误
 训练部分问题：
 
-######   代码跑通，但显存溢出
-######  OSError: (External)  Cuda error(700), an illegal memory access was encountered.
-  [Advise: Please search for the error code(700) on website( https://docs.nvidia.com/cuda/archive/10.0/cuda-runtime-api/group__CUDART__TYPES.html#group__CUDART__TYPES_1g3f51e3575c2178246db0a94a430e0038 ) to get Nvidia's official solution about CUDA Error.] (at /paddle/paddle/fluid/platform/gpu_info.cc:382)
+######   代码跑通,mem暂设为0
+######  CUDA_LAUNCH_BLOCKING=1 python tools/train.py -n yolox-s -d 1 -b 1 --fp16
 
 
-
+![image](https://user-images.githubusercontent.com/26295563/142130686-e8871c34-a5b7-4009-8e61-932ba13a2b14.png)
 
 
 
