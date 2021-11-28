@@ -41,5 +41,7 @@ YOLOX-s 模型评估
 
 ![image](https://user-images.githubusercontent.com/26295563/142130686-e8871c34-a5b7-4009-8e61-932ba13a2b14.png)
 
+训练几个iter后出现
+![微信图片_20211128092639](https://user-images.githubusercontent.com/26295563/143725366-39c6f7ef-655b-427b-99e5-dcd9c003e2b3.jpg)
 
 
