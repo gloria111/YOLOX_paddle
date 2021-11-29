@@ -43,3 +43,5 @@ YOLOX-s 模型评估
 
 训练几个iter后出现
 ![image](https://user-images.githubusercontent.com/26295563/143725770-924ccd0e-450a-4cbe-90df-c78685057ffd.png)
+
+issue链接https://github.com/PaddlePaddle/Paddle/issues/37665
