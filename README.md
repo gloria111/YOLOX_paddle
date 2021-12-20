@@ -41,7 +41,8 @@ YOLOX-s 模型评估
 
 ![image](https://user-images.githubusercontent.com/26295563/142130686-e8871c34-a5b7-4009-8e61-932ba13a2b14.png)
 
-训练几个iter后出现
-![image](https://user-images.githubusercontent.com/26295563/143725770-924ccd0e-450a-4cbe-90df-c78685057ffd.png)
+训练出现
+![58ea8495346fb4ba866458e1b4fc9f7](https://user-images.githubusercontent.com/26295563/146761088-7259f2c3-9e49-486c-803a-fb7564b3dc16.png)
 
-issue链接https://github.com/PaddlePaddle/Paddle/issues/37665
+
+另外现用numpy代替逻辑运算api，issue链接https://github.com/PaddlePaddle/Paddle/issues/37665
