@@ -19,6 +19,7 @@ YOLOX-s 模型评估
     pip install pycocotools
     pip install loguru
     export YOLOX_DATADIR=/home/aistudio/paddle版本/YOLOX/datasets
+    python tools/train.py -n yolox-s -d 1 -b 1 --fp16
     python tools/eval.py -n  yolox-s -c yolox_s.pdparams -b 64 -d 1 --conf 0.001 [--fp16] [--fuse]
 
 ######   fuse: fuse conv and bn
