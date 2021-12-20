@@ -35,7 +35,7 @@ YOLOX-s 模型评估
 ######   在darknet层特征图出现较大错误
 训练部分问题：
 
-######   代码跑通,mem暂设为0
+######   依赖库原因,将mem暂设为0
 ######  CUDA_LAUNCH_BLOCKING=1 python tools/train.py -n yolox-s -d 1 -b 1 --fp16
 
 
